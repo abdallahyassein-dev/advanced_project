@@ -5,12 +5,13 @@ import 'package:advanced_project/features/login/data/models/login_request_body.d
 import 'package:advanced_project/features/login/logic/cubit/login_cubit.dart';
 import 'package:advanced_project/features/login/ui/widgets/email_and_password.dart';
 import 'package:advanced_project/features/login/ui/widgets/login_bloc_listener.dart';
+import 'package:advanced_project/features/signup/ui/widgets/already_have_account.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
-import 'widgets/already_have_account.dart';
+import 'widgets/dont_have_account_text.dart';
 import 'widgets/terms_and_conditions.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -59,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                      verticalSpace(16),
                     const TermsAndConditionsText(),
                     verticalSpace(60),
-                    const AlreadyHaveAccountText(),
+                    const DontHaveAccountText(),
                     const LoginBlocListener(),
               
               ],
@@ -76,10 +77,8 @@ class LoginScreen extends StatelessWidget {
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
       context.read<LoginCubit>().emitLoginState(
-        LoginRequestBody(
-          email: context.read<LoginCubit>().emailController.text,
-          password: context.read<LoginCubit>().passwordController.text,
-        ),
+        
+        
       );
     }
   }
