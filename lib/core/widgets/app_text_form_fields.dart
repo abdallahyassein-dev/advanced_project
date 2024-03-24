@@ -1,9 +1,7 @@
+import 'package:advanced_project/core/themeing/colors.dart';
+import 'package:advanced_project/core/themeing/styles.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../themeing/colors.dart';
-import '../themeing/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
@@ -15,6 +13,9 @@ class AppTextFormField extends StatelessWidget {
   final bool? isObscureText;
   final Widget? suffixIcon;
   final Color? backgroundColor;
+  final TextEditingController? controller;
+  final Function(String?) validator;
+
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -26,11 +27,14 @@ class AppTextFormField extends StatelessWidget {
     this.isObscureText,
     this.suffixIcon,
     this.backgroundColor,
+    this.controller,
+    required this.validator,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
@@ -51,7 +55,21 @@ class AppTextFormField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(16.0),
             ),
-        hintStyle: hintStyle ?? TextStyles.font14GrayRegular,
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
         fillColor: backgroundColor ?? ColorsManager.moreLightGray,
@@ -59,6 +77,9 @@ class AppTextFormField extends StatelessWidget {
       ),
       obscureText: isObscureText ?? false,
       style: TextStyles.font14DarkBlueMedium,
+      validator: (value) {
+        return validator(value);
+      },
     );
   }
 }
