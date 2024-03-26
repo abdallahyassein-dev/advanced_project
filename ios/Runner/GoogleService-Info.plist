@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBnRJQigZVKaIE_fpKMko5aJ3fSqiE7Buo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>37418148688</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.newlearning.advancedProject</string>
+	<key>PROJECT_ID</key>
+	<string>doc-doc-distribution</string>
+	<key>STORAGE_BUCKET</key>
+	<string>doc-doc-distribution.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:37418148688:ios:5e9f1dd643cafd27e6c255</string>
+</dict>
+</plist>
