@@ -4,6 +4,7 @@ import 'package:advanced_project/doc_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'firebase_options.dart';
 
 void main() async{
   setupGetIt();
@@ -13,5 +14,5 @@ void main() async{
     statusBarColor: Colors.green, // status bar color
   ));
   runApp( DocApp(appRouter: AppRouter(),));
-}
+} 
 
