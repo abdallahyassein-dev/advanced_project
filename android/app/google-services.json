@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "37418148688",
+    "project_id": "doc-doc-distribution",
+    "storage_bucket": "doc-doc-distribution.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37418148688:android:d43af7f56d8eb7ace6c255",
+        "android_client_info": {
+          "package_name": "com.newlearning.advanced_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcd9GcMrcz4Vw4hWGwnSe2joKKeQ4RAlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
